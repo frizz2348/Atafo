@@ -6,57 +6,138 @@
 $bg-color: white;
 $text-color: black;
 
+
 body {
     background-color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    &.open {
+        overflow: hidden;
+    }
+}
+
+
+.container {
     background: url('images/img-bg.jpg');
     background-size: cover;
     background-position: center;
+    height: 1500px;
 }
+
 
 .menu-btn {
     position: absolute;
+    z-index: 1;
     top: 20px;
-    right: 10px;
-    height: 2px;
+    left: 10px;
+    height: 20px;
     width: 25px;
-    background-color: red;
+    //background-color: rgb(187, 255, 0);
     cursor: pointer;
+    transition: ease in 1s;
+    &.open {
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        height: 25px;
+        width: 25px;
+        //background-color: rgb(187, 255, 0);
+        cursor: pointer;
+        transition: ease in 1s;
+    }
     &__burger {
         position: absolute;
         top: 0;
-        right: 0;
-        height: 2px;
+        left: 0;
+        height: 3px;
         width: 25px;
         background-color: cyan;
-        &:before {
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 100%;
-            top: 8px;
-            right: 0;
-            height: 2px;
-            width: 25px;
-            background-color: black;
-        }
-        &:after {
+        transition: ease-in-out 1s;
+        &::before {
             position: absolute;
             content: '';
             width: 100%;
             height: 100%;
             top: -8px;
-            right: 0;
-            height: 2px;
+            height: 3px;
             width: 25px;
-            background-color: rgb(216, 20, 20);
+            background-color: rgb(221, 21, 178);
+            transition: ease-in-out 1s;
+            z-index: 1;
         }
+        &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 8px;
+            height: 3px;
+            width: 25px;
+            background-color: rgb(248, 23, 218);
+            transition: ease-in-out 1s;
+            z-index: 1;
+        }
+        &.open {
+            background-color: transparent;
+            transform: rotate(180deg);
+            transition: ease-in-out 500ms;
+            float: right;
+            left: 240px;
+            height: 20px;
+            width: 25px;
+            position: absolute;
+            z-index: 1;
+            //background-color: rgb(187, 255, 0);
+            cursor: pointer;
+            transition: ease in 1s;
+
+            &::before {
+                transform: rotate(45deg) translate(5px, 8px);
+                background-color: black;
+            }
+            &::after {
+                transform: rotate(-45deg) translate(3px, -7px);
+                background-color: black;
+            }
+        }
+       
+    }
+}
+
+header {
+    background-color: white;
+    height: 80px;
+    position: fixed;
+    top: 1px;
+    width: 100%;
+    h1 {
+        text-align: center;
+        font-size: 60px;
+        font-family: 'Lobster', cursive;
+        color: rgb(230, 26, 162) ;
+    }
+    img {
+        width: 50px;
+        border-radius: .4em;
+        position: fixed;
+        top: 5px;
+        right: 5px;
     }
 }
 .sidebar {
     height: 700px;
     width: 250px;
     background-color: rgba(233, 233, 233, 0.822);
+    transition: ease-in 1s;
+    visibility: hidden;
+    position: fixed;
+    top: 10px;
+    z-index: 1;
+
+    &.open {
+        visibility: visible;
+        overflow-x: hidden;
+    }
 
     input {
         margin: 60px 0 30px 40px;
@@ -98,6 +179,21 @@ i {
     }
 }
 
+
+.cards {
+    img {
+        height: 600px;
+        width: 600px;
+    }
+}
+
+
+
+
+
+
+
+
 footer {
     position: fixed;
     bottom: 1px;
@@ -105,8 +201,13 @@ footer {
     background-color: brown;
     color: white;
     text-align: center;
+    font-weight: 300;
+    span{
+        font-weight: 500;
+    }
     a {
         color: white;
+        font-weight: 500;
         &:hover {
             color: cyan;
         }
