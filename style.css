@@ -10,10 +10,8 @@ body {
     overflow: hidden; }
 
 .container {
-  background: url("images/img-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 1500px; }
+  background: rgba(255, 255, 255, 0.63);
+  width: 100%; }
 
 .menu-btn {
   position: absolute;
@@ -140,11 +138,36 @@ i {
   i:hover {
     color: red; }
 
-.cards img {
-  height: 600px;
-  width: 600px; }
+.top {
+  background-color: #cf16a7;
+  width: 60px;
+  height: 28px;
+  border-radius: .8em;
+  color: #00e6f6;
+  position: fixed;
+  bottom: 100px; }
+
+.cards {
+  margin-top: 30px 0;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  grid-gap: 2em;
+  grid-auto-rows: minmax(300px, auto);
+  align-items: center;
+  justify-items: start; }
+  .cards img {
+    border-radius: .8em;
+    height: 600px;
+    width: 100%; }
+  .cards p {
+    font-family: 'Cabin', sans-serif;
+    line-height: 24px;
+    font-weight: 500;
+    border: 1px solid lightgrey;
+    border-radius: 1em; }
 
 footer {
+  margin-top: 140px;
   position: fixed;
   bottom: 1px;
   width: 100%;

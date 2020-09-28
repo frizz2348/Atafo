@@ -23,3 +23,8 @@ function toggleMenu() {
     }
 }
 
+AOS.init({
+    offset: 250,
+    duration: 1000,
+    easing: 'ease-in-out',
+})
