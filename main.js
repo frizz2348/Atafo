@@ -23,8 +23,9 @@ function toggleMenu() {
     }
 }
 
+
 AOS.init({
-    offset: 250,
-    duration: 1000,
+    offset: 200,
+    duration: 800,
     easing: 'ease-in-out',
 })
