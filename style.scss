@@ -196,10 +196,14 @@ i {
 }
 
 
+.black {
+    background: linear-gradient(rgba(27, 25, 27, 0.5), rgba(31, 26, 30, 0.5)), url('images/img-bg.jpg');
+}
+
 
 .section {
     height: 700px;
-    background: url('images/img-bg.jpg');
+    //background: url('images/img-bg.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 1em;
