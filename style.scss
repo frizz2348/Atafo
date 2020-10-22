@@ -231,7 +231,7 @@ i {
 
 .cards {
     display: grid;
-    grid-template-rows: 6fr 1fr;
+    grid-template-rows: 5fr 1fr;
     grid-gap: 1em;
     grid-auto-rows: minmax(300px, auto);
     margin: 15px;
