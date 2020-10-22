@@ -21,6 +21,24 @@ function toggleMenu() {
     }
 }
 
+let b = document.getElementById('dark');
+let dark = false;
+const body = document.querySelector('body');
+
+
+let darkMode = () => {
+    if (!dark) {
+        body.style.backgroundColor = 'black';
+        b.innerHTML = 'Day Mode';
+        dark = true;
+    } else {
+        body.style.backgroundColor = 'white';
+        b.innerHTML = 'Dark Mode';
+        dark = false;
+    }
+}
+
+b.addEventListener('click', darkMode);
 
 AOS.init({
     offset: 100,

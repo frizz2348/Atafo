@@ -196,6 +196,25 @@ i {
     }
 }
 
+#dark {
+    background-color: rgba(0, 0, 0, 0.465);
+    width: 90px;
+    height: 28px;
+    border-radius: .8em;
+    color: rgb(0, 230, 246);
+    position: fixed;
+    bottom: 52px;
+    right: 0;
+    &:hover {
+        background-color: rgba(0, 230, 246, 0.493);
+        color: rgb(24, 15, 22);
+    }
+}
+
+.dark {
+        background-color: black;
+}
+
 .black {
     background: linear-gradient(rgba(27, 25, 27, 0.5), rgba(31, 26, 30, 0.5)), url('images/img-bg.jpg');
 }
